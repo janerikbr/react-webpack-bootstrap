@@ -2,5 +2,5 @@
 
 ## Getting started
     npm install
-    node server.js, or if you're using nodemon: nodemon -e js,jsx server.js
+    npm start
     npm run watch
