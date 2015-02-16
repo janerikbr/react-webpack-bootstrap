@@ -1,8 +1,8 @@
-var express = require('express');
-var React = require('react');
-var Layout = require('./components/Layout.jsx');
+const express = require('express');
+const React = require('react');
+const Layout = require('./components/Layout.jsx');
 
-var app = express();
+const app = express();
 
 app.get('/', function(req, res) {
   var html = React.renderToString(<Layout />);
