@@ -1,0 +1,1 @@
+# React browserify boilerplate with babel (es6) transpiler
