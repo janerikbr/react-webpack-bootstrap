@@ -8,7 +8,7 @@ module.exports = React.createClass({
         <head>
           <script src="/bundle.js"></script>
         </head>
-        <h1>LOL</h1>
+        <h1>React / browserify boilerplate</h1>
       </html>
     );
   },
