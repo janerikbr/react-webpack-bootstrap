@@ -1,4 +1,4 @@
-# React browserify boilerplate with babel (es6) transpiler
+# React / browserify boilerplate with babel (es6) transpiler
 
 ## Getting started
     npm install
