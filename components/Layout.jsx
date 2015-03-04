@@ -4,6 +4,12 @@ module.exports = React.createClass({
 
   displayName: 'Layout',
 
+  propTypes: {
+    // You can declare that a prop is a specific JS primitive. By default, these
+    // are all optional, but you can make them required like so:
+    title: React.PropTypes.string.isRequired
+  },
+
   componentDidMount() {
     console.log('Component did mount');
   },
