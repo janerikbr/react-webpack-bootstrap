@@ -1,3 +1,5 @@
+require("babel-core/polyfill");
+
 const React = require('react');
 const Layout = require('../components/Layout.jsx');
 
