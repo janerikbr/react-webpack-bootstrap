@@ -1,6 +1,6 @@
-const express = require('express');
-const React = require('react');
-const Layout = require('./components/Layout.jsx');
+import express from 'express';
+import React from 'react';
+import Layout from './components/Layout.jsx';
 
 const app = express();
 
@@ -22,7 +22,4 @@ app.get('/', function(req, res) {
 
 app.use(express.static('static', {}));
 
-module.exports = app;
-
-
-
+export default app;
