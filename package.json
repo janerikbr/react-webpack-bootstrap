@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx",
     "build": "browserify -t babelify browser/main.js | uglifyjs > static/bundle.js",
     "watch": "watchify --extension=.jsx -t babelify browser/main.js -o static/bundle.js",
     "start": "nodemon -e js,jsx server.js"
