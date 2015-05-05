@@ -1,36 +1,40 @@
 import React from 'react';
 
 export default React.createClass({
-
   displayName: 'Layout',
-
   propTypes: {
-    // You can declare that a prop is a specific JS primitive. By default, these
-    // are all optional, but you can make them required like so:
-    title: React.PropTypes.string.isRequired
+    content: React.PropTypes.shape({
+      markup: React.PropTypes.string,
+      props: React.PropTypes.object
+    })
   },
-
-  componentDidMount() {
-    console.log('Component did mount');
+  getContentMarkup() {
+    return {__html: this.props.content.markup}
   },
-
+  getInitialData() {
+    return {
+      __html: JSON.stringify({
+        props: this.props.content.props,
+        component: this.props.content.component
+      })
+    };
+  },
   render() {
-
     return (
-        <html>
-          <head>
-            <title>React / browserify boilerplate</title>
-            <script
-                id="__react_initial_props"
-                type="application/json"
-                dangerouslySetInnerHTML={{__html: JSON.stringify(this.props)}}
-            />
-            <script src="/bundle.js"></script>
-          </head>
-          <body>
-            <h1>{this.props.title}</h1>
-          </body>
-        </html>
+      <html>
+      <head>
+        <title>React / browserify boilerplate</title>
+        <script
+          id="__react_server_side_data"
+          type="application/json"
+          dangerouslySetInnerHTML={this.getInitialData()}
+          />
+        <script src="/bundle.js"></script>
+      </head>
+      <body>
+        <div id="content" dangerouslySetInnerHTML={this.getContentMarkup()}/>
+      </body>
+      </html>
     );
   }
 

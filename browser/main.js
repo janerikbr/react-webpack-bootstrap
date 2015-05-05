@@ -1,9 +1,15 @@
 import "babel-core/polyfill";
-
 import React from "react";
-import Layout from "../components/Layout.jsx";
+import Content from "../components/Content.jsx";
+import domready from "domready";
+const knownComponents = {
+  Content: require("../components/Content.jsx")
+};
 
-const initialPropsEl = document.getElementById("__react_initial_props");
-const initialProps = JSON.parse(initialPropsEl.innerHTML);
-
-React.render(React.createElement(Layout, initialProps), document);
+domready(() => {
+  const serverSideData = JSON.parse(document.getElementById("__react_server_side_data").innerHTML);
+  const RenderedComponent = knownComponents[serverSideData.component];
+  const initialProps = serverSideData.props;
+  const target = document.getElementById('content');
+  React.render(<RenderedComponent {...initialProps}/>, target);
+});
