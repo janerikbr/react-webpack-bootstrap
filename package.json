@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "babel-core": "^5.1.11",
-    "babelify": "^6.0.2",
     "domready": "^1.0.8",
     "express": "^4.12.3",
     "react": "^0.13.2",
