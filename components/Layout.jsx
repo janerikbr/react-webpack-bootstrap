@@ -23,7 +23,7 @@ export default React.createClass({
     return (
       <html>
       <head>
-        <title>React / browserify boilerplate</title>
+        <title>React / webpack boilerplate</title>
         <script
           id="__react_server_side_data"
           type="application/json"
