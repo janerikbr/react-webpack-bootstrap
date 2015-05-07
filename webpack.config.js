@@ -1,4 +1,5 @@
 module.exports = {
+  devtool: "source-map",
   entry: "./browser/main",
   output: {
     path: __dirname + "/static",
