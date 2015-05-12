@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
 export default React.createClass({
-  displayName: 'Content',
+  displayName: "Content",
+
   propTypes: {
     title: React.PropTypes.string.isRequired
   },
   componentDidMount() {
-    console.log("Content component did mount!!")
+    console.log("Content component did mount");
   },
   render() {
     return (

@@ -4,9 +4,9 @@ import Layout from "./components/Layout.jsx";
 import Content from "./components/Content.jsx";
 
 const app = express();
-const env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || "development";
 
-if (env === 'development') {
+if (env === "development") {
   const webpackDevMiddleware = require("webpack-dev-middleware");
   const webpack = require("webpack");
   var compiler = webpack(require("./webpack.config"));
@@ -32,7 +32,7 @@ app.get("/", function (req, res) {
     const content = {
       props: props,
       markup: markup,
-      component: 'Content'
+      component: "Content"
     };
 
     const html = React.renderToStaticMarkup(<Layout content={content}/>);
