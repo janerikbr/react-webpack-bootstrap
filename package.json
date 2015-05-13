@@ -17,7 +17,7 @@
     "domready": "^1.0.8",
     "express": "^4.12.3",
     "react": "^0.13.3",
-    "webpack": "^1.8.11"
+    "webpack": "^1.9.5"
   },
   "repository": {
     "type": "git",
