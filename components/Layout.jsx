@@ -9,7 +9,7 @@ export default React.createClass({
     })
   },
   getContentMarkup() {
-    return {__html: this.props.content.markup}
+    return {__html: this.props.content.markup};
   },
   getInitialData() {
     return {

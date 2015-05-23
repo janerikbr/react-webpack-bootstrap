@@ -1,10 +1,8 @@
-require("babel-core/register");
-const app = require("./app");
+require('babel-core/register');
+const app = require('./app');
 
-var server = app.listen(3000, function () {
-
-  var host = server.address().address;
-  var port = server.address().port;
-
-  console.log("Example app listening at http://%s:%s", host, port);
+const server = app.listen(3000, function handler() {
+  const host = server.address().address;
+  const port = server.address().port;
+  console.log('Example app listening at http://%s:%s', host, port);
 });
