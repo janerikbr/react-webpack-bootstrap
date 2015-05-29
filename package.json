@@ -10,7 +10,7 @@
     "start": "nodemon -e js,jsx server.js",
     "start-production": "node server.js"
   },
-  "author": "",
+  "author": "Jan-Erik Bråthen",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^5.4.7",
