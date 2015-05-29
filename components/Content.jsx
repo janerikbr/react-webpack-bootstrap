@@ -1,14 +1,11 @@
 import React from 'react';
 
-export default React.createClass({
-  displayName: 'Content',
+class Content extends React.Component {
 
-  propTypes: {
-    title: React.PropTypes.string.isRequired
-  },
   componentDidMount() {
     console.log('Content component did mount');
-  },
+  };
+
   render() {
     return (
       <div>
@@ -17,4 +14,11 @@ export default React.createClass({
     );
   }
 
-});
+}
+
+Content.displayName = 'Content';
+Content.propTypes = {
+  title: React.PropTypes.string.isRequired
+};
+
+export default Content;
