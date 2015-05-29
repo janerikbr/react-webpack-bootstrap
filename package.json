@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-bootstrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React / webpack boilerplate with babel (es6) transpiler",
   "main": "index.js",
   "scripts": {
