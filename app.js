@@ -12,6 +12,9 @@ if (env === 'development') {
   const compiler = webpack(require('./webpack.config'));
   app.use(webpackDevMiddleware(compiler, {
     // options
+    stats: {
+      colors: true
+    }
   }));
 }
 
