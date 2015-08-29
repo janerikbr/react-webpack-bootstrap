@@ -3,8 +3,8 @@ import React from 'react';
 class Content extends React.Component {
 
   componentDidMount() {
-    console.log('Content component did mount');
-  };
+    console.log('Content component did mount'); // eslint-disable-line no-console
+  }
 
   render() {
     return (
@@ -18,7 +18,7 @@ class Content extends React.Component {
 
 Content.displayName = 'Content';
 Content.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string.isRequired,
 };
 
 export default Content;

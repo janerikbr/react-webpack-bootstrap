@@ -10,8 +10,8 @@ class Layout extends React.Component {
     return {
       __html: JSON.stringify({
         props: this.props.content.props,
-        component: this.props.content.component
-      })
+        component: this.props.content.component,
+      }),
     };
   }
 
@@ -40,8 +40,9 @@ Layout.displayName = 'Layout';
 Layout.propTypes = {
   content: React.PropTypes.shape({
     markup: React.PropTypes.string,
-    props: React.PropTypes.object
-  })
+    props: React.PropTypes.object,
+    component: React.PropTypes.string,
+  }),
 };
 
 export default Layout;

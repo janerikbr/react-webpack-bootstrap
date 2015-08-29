@@ -2,7 +2,7 @@ import 'babel-core/polyfill';
 import React from 'react';
 import domready from 'domready';
 const knownComponents = {
-  Content: require('../components/Content.jsx')
+  Content: require('../components/Content.jsx'),
 };
 
 domready(() => {

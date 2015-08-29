@@ -4,11 +4,11 @@ module.exports = {
   entry: './browser/main',
   output: {
     path: path.join(__dirname, '/static'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'}
-    ]
-  }
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'},
+    ],
+  },
 };

@@ -13,8 +13,8 @@ if (env === 'development') {
   app.use(webpackDevMiddleware(compiler, {
     // options
     stats: {
-      colors: true
-    }
+      colors: true,
+    },
   }));
 }
 
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
     const content = {
       props: props,
       markup: markup,
-      component: 'Content'
+      component: 'Content',
     };
 
     const html = React.renderToStaticMarkup(<Layout content={content}/>);
