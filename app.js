@@ -1,5 +1,6 @@
 import express from 'express';
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import Layout from './components/Layout.jsx';
 import Content from './components/Content.jsx';
 
@@ -30,15 +31,13 @@ app.get('/', (req, res) => {
   // make 'fake' http request and render component Layout with its data
   fetchData().then(data => {
     const props = {title: data.title};
-    const markup = React.renderToString(<Content {...props}/>);
-
+    const markup = ReactDOMServer.renderToString(<Content {...props}/>);
     const content = {
-      props: props,
-      markup: markup,
+      props,
+      markup,
       component: 'Content',
     };
-
-    const html = React.renderToStaticMarkup(<Layout content={content}/>);
+    const html = ReactDOMServer.renderToStaticMarkup(<Layout content={content}/>);
     res.status(200).send(html);
   });
 });
