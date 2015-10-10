@@ -10,6 +10,9 @@
     "start": "nodemon -e js,jsx server.js",
     "start-production": "node server.js"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "author": "Jan-Erik Bråthen",
   "license": "ISC",
   "dependencies": {
@@ -29,6 +32,7 @@
     "eslint": "^1.6.0",
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.5.1",
+    "pre-commit": "^1.1.1",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0"
   }
