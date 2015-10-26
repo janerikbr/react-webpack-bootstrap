@@ -1,10 +1,15 @@
 import React from 'react';
 
-class Content extends React.Component {
+const Content = React.createClass({
+  displayName: 'Content',
+
+  propTypes: {
+    title: React.PropTypes.string.isRequired,
+  },
 
   componentDidMount() {
     console.log('Content component did mount'); // eslint-disable-line no-console
-  }
+  },
 
   render() {
     return (
@@ -12,13 +17,8 @@ class Content extends React.Component {
         <h1>{this.props.title}</h1>
       </div>
     );
-  }
+  },
+});
 
-}
-
-Content.displayName = 'Content';
-Content.propTypes = {
-  title: React.PropTypes.string.isRequired,
-};
 
 export default Content;

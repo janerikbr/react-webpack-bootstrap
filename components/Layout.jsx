@@ -1,10 +1,22 @@
 import React from 'react';
 
-class Layout extends React.Component {
+const Layout = React.createClass({
+
+  displayName: 'Layout',
+
+  propTypes: {
+    content: React.PropTypes.shape({
+      markup: React.PropTypes.string,
+      props: React.PropTypes.object,
+      component: React.PropTypes.string,
+    }),
+  },
 
   getContentMarkup() {
-    return {__html: this.props.content.markup};
-  }
+    return {
+      __html: this.props.content.markup,
+    };
+  },
 
   getInitialData() {
     return {
@@ -13,7 +25,7 @@ class Layout extends React.Component {
         component: this.props.content.component,
       }),
     };
-  }
+  },
 
   render() {
     return (
@@ -32,17 +44,8 @@ class Layout extends React.Component {
         </body>
       </html>
     );
-  }
+  },
+});
 
-}
-
-Layout.displayName = 'Layout';
-Layout.propTypes = {
-  content: React.PropTypes.shape({
-    markup: React.PropTypes.string,
-    props: React.PropTypes.object,
-    component: React.PropTypes.string,
-  }),
-};
 
 export default Layout;
