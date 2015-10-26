@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Content = React.createClass({
+
   displayName: 'Content',
 
   propTypes: {
