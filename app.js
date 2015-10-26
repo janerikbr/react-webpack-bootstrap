@@ -1,6 +1,7 @@
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import fetchData from './modules/fetchData';
 import Layout from './components/Layout.jsx';
 import Content from './components/Content.jsx';
 
@@ -17,14 +18,6 @@ if (env === 'development') {
       colors: true,
     },
   }));
-}
-
-function fetchData() {
-  return new Promise(resolve => {
-    setTimeout(()=> {
-      resolve({title: 'Server side fetched title'});
-    }, 0);
-  });
 }
 
 app.get('/', (req, res) => {
