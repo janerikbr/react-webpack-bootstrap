@@ -1,7 +1,7 @@
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import fetchData from './modules/fetchData';
+import {fetchData} from './modules/apiClient';
 import Layout from './components/Layout.jsx';
 import Content from './components/Content.jsx';
 
