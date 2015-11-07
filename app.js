@@ -37,4 +37,4 @@ app.get('/', (req, res) => {
 
 app.use(express.static('static', {}));
 
-module.exports = app;
+export default app;

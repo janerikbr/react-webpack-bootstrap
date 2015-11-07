@@ -1,7 +1,6 @@
-require('babel-core/register');
-const app = require('./app');
+import app from './app';
 
-const server = app.listen(3000, function handler() {
+const server = app.listen(3000, () => {
   const host = server.address().address;
   const port = server.address().port;
   console.log('Example app listening at http://%s:%s', host, port); // eslint-disable-line no-console
