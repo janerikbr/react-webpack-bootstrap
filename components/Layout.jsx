@@ -36,7 +36,7 @@ const Layout = React.createClass({
             id="__react_server_side_data"
             type="application/json"
             dangerouslySetInnerHTML={this.getInitialData()}
-            />
+          />
           <script src="/bundle.js"></script>
         </head>
         <body>

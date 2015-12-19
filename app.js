@@ -1,7 +1,7 @@
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import {fetchData} from './modules/apiClient';
+import { fetchData } from './modules/apiClient';
 import Layout from './components/Layout.jsx';
 import Content from './components/Content.jsx';
 
@@ -23,7 +23,7 @@ if (env === 'development') {
 app.get('/', (req, res) => {
   // make 'fake' http request and render component Layout with its data
   fetchData().then(data => {
-    const props = {title: data.title};
+    const props = { title: data.title };
     const markup = ReactDOMServer.renderToString(<Content {...props}/>);
     const content = {
       props,
