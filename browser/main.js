@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Content from '../components/Content/Content.jsx';
 import domready from 'domready';
 
-import './main.css';
+import '../styles/main.css';
 
 const knownComponents = {
   Content,

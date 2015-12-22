@@ -1,4 +1,5 @@
 import React from 'react';
+import './Content.css';
 
 const Content = React.createClass({
 
@@ -15,7 +16,7 @@ const Content = React.createClass({
   render() {
     return (
       <div>
-        <h1>{this.props.title}{this.props.title} dette er en test</h1>
+        <h1>{this.props.title}</h1>
       </div>
     );
   },
