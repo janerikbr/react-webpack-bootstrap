@@ -1,8 +1,11 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Content from '../components/Content.jsx';
+import Content from '../components/Content/Content.jsx';
 import domready from 'domready';
+
+import './main.css';
+
 const knownComponents = {
   Content,
 };
