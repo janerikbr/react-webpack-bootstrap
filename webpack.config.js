@@ -1,7 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
+
 module.exports = {
   devtool: 'source-map',
-  entry: './browser/main',
+  entry: [
+    'webpack-hot-middleware/client',
+    path.resolve(__dirname, 'browser/main.js'),
+  ],
   output: {
     path: path.join(__dirname, '/static'),
     filename: 'bundle.js',
@@ -11,8 +16,16 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
+        loaders: [
+          'react-hot',
+          'babel',
+        ],
       },
     ],
   },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+  ],
 };

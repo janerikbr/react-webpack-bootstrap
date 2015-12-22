@@ -3,15 +3,17 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { fetchData } from './modules/apiClient';
 import Layout from './components/Layout.jsx';
-import Content from './components/Content.jsx';
+import Content from './components/Content/Content.jsx';
 
 const app = express();
 const env = process.env.NODE_ENV || 'development';
 
 if (env === 'development') {
   const webpackDevMiddleware = require('webpack-dev-middleware');
+  const webpackHotMiddleware = require('webpack-hot-middleware');
   const webpack = require('webpack');
   const compiler = webpack(require('./webpack.config'));
+  app.use(webpackHotMiddleware(compiler));
   app.use(webpackDevMiddleware(compiler, {
     // options
     stats: {
