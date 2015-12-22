@@ -1,4 +1,5 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 
 module.exports = {
@@ -21,6 +22,10 @@ module.exports = {
           'babel',
         ],
       },
+      {
+        test: /\.css?$/,
+        loader: 'style-loader!css-loader!postcss-loader',
+      },
     ],
   },
   plugins: [
@@ -28,4 +33,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],
+  postcss() {
+    return [autoprefixer];
+  },
 };
