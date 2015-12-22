@@ -1,10 +1,9 @@
 # React / webpack boilerplate
 ## Features
 - Server side rendering
-- Babel (es6) transpiler
-- Webpack module bundler
-- Hot reloading of JavaScript and css
-- PostCSS for transforming styles
+- Code is transpiled by Babel, using presets `es2015` and `react`
+- Hot reloading of JavaScript and CSS
+- `PostCSS` for transforming styles (currently `autoprefixer`)
 
 ## Getting started
 ```
