@@ -32,8 +32,15 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        BROWSER: JSON.stringify(true),
+      },
+    }),
   ],
   postcss() {
-    return [autoprefixer];
+    return [
+      autoprefixer,
+    ];
   },
 };
