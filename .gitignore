@@ -1,6 +1,5 @@
 node_modules
 static/*.js
-static/*.map
 static/*.css
 npm-debug.log
 *.map
