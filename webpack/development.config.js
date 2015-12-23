@@ -3,13 +3,13 @@ const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    path.resolve(__dirname, 'browser/main.js'),
+    path.resolve(__dirname, '../browser/main.js'),
   ],
   output: {
-    path: path.join(__dirname, '/static'),
+    path: path.join(__dirname, '../static'),
     filename: 'bundle.js',
   },
   module: {

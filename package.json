@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js,.jsx",
-    "build": "webpack -p",
+    "build": "NODE_ENV=production webpack -p --config ./webpack/production.config.js",
     "start": "nodemon -e js,jsx --watch app.js --watch server.js server.js --exec babel-node",
-    "start-production": "babel-node server.js"
+    "start-production": "NODE_ENV=production babel-node server.js"
   },
   "pre-commit": [
     "lint"
@@ -36,6 +36,7 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.1.1",
     "eslint-plugin-react": "^3.11.3",
+    "extract-text-webpack-plugin": "^0.9.1",
     "nodemon": "^1.8.1",
     "postcss": "^5.0.13",
     "postcss-loader": "^0.8.0",

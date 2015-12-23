@@ -12,7 +12,7 @@ if (env === 'development') {
   const webpackDevMiddleware = require('webpack-dev-middleware');
   const webpackHotMiddleware = require('webpack-hot-middleware');
   const webpack = require('webpack');
-  const compiler = webpack(require('./webpack.config'));
+  const compiler = webpack(require('./webpack/development.config'));
   app.use(webpackHotMiddleware(compiler));
   app.use(webpackDevMiddleware(compiler, {
     // options
