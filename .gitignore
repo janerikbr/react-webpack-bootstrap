@@ -1,4 +1,6 @@
 node_modules
-static/bundle.js
+static/*.js
+static/*.map
+static/*.css
 npm-debug.log
 *.map
