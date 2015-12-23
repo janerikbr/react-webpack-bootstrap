@@ -1,5 +1,8 @@
 import React from 'react';
-import './Content.css';
+
+if (process.env.BROWSER) {
+  require('./Content.css');
+}
 
 const Content = React.createClass({
 
@@ -15,7 +18,7 @@ const Content = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="content">
         <h1>{this.props.title}</h1>
       </div>
     );
