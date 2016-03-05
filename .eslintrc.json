@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "nrk",
+    "nrk/rules/jsx",
+    "nrk/rules/react"
+  ],
+  "rules": {
+    "semi": [2, "never"]
+  }
+}

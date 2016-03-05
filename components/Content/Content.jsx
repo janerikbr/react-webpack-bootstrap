@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 
+// eslint-disable-next-line no-process-env
 if (process.env.BROWSER) {
-  require('./Content.css');
+  require('./Content.css')
 }
 
 const Content = React.createClass({
@@ -13,7 +14,7 @@ const Content = React.createClass({
   },
 
   componentDidMount() {
-    console.log('Content component did mount'); // eslint-disable-line no-console
+    console.log('Content component did mount') // eslint-disable-line no-console
   },
 
   render() {
@@ -21,9 +22,9 @@ const Content = React.createClass({
       <div className="content">
         <h1>{this.props.title}</h1>
       </div>
-    );
+    )
   },
-});
+})
 
 
-export default Content;
+export default Content

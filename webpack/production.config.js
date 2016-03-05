@@ -1,7 +1,7 @@
-const path = require('path');
-const autoprefixer = require('autoprefixer');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   devtool: 'source-map',
@@ -43,6 +43,6 @@ module.exports = {
   postcss() {
     return [
       autoprefixer,
-    ];
+    ]
   },
-};
+}

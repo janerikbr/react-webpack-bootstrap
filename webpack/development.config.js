@@ -1,6 +1,6 @@
-const path = require('path');
-const autoprefixer = require('autoprefixer');
-const webpack = require('webpack');
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const webpack = require('webpack')
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -41,6 +41,6 @@ module.exports = {
   postcss() {
     return [
       autoprefixer,
-    ];
+    ]
   },
-};
+}

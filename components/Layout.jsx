@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/no-danger */
+import React from 'react'
 
 const Layout = React.createClass({
 
@@ -15,7 +16,7 @@ const Layout = React.createClass({
   getContentMarkup() {
     return {
       __html: this.props.content.markup,
-    };
+    }
   },
 
   getInitialData() {
@@ -24,7 +25,7 @@ const Layout = React.createClass({
         props: this.props.content.props,
         component: this.props.content.component,
       }),
-    };
+    }
   },
 
   render() {
@@ -40,12 +41,12 @@ const Layout = React.createClass({
           <script src="/bundle.js"></script>
         </head>
         <body>
-          <div id="content" dangerouslySetInnerHTML={this.getContentMarkup()}/>
+          <div id="content" dangerouslySetInnerHTML={this.getContentMarkup()} />
         </body>
       </html>
-    );
+    )
   },
-});
+})
 
 
-export default Layout;
+export default Layout
