@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react'
 
 // eslint-disable-next-line no-process-env
 if (process.env.BROWSER) {
@@ -10,7 +10,7 @@ const Content = React.createClass({
   displayName: 'Content',
 
   propTypes: {
-    title: React.PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   },
 
   componentDidMount() {

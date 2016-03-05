@@ -1,15 +1,15 @@
 /* eslint-disable react/no-danger */
-import React from 'react'
+import React, {PropTypes} from 'react'
 
 const Layout = React.createClass({
 
   displayName: 'Layout',
 
   propTypes: {
-    content: React.PropTypes.shape({
-      markup: React.PropTypes.string,
-      props: React.PropTypes.object,
-      component: React.PropTypes.string,
+    content: PropTypes.shape({
+      markup: PropTypes.string,
+      props: PropTypes.object,
+      component: PropTypes.string,
     }),
   },
 
